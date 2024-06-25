@@ -1,0 +1,20 @@
+@startuml
+start
+:Check if n <= 1;
+if (n <= 1) then (yes)
+    :Return n;
+else (no)
+    :Initialize array fibArray with size n+1;
+    :Set fibArray[0] = 0;
+    :Set fibArray[1] = 1;
+    while (i <= n)
+        :fibArray[i] = fibArray[i-1] + fibArray[i-2];
+    endwhile
+    :Return fibArray[n];
+endif
+note right
+    Time complexity: O(n)
+    Space complexity: O(n)
+end note
+stop
+@enduml

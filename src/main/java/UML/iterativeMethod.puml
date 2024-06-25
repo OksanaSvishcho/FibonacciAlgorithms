@@ -1,0 +1,19 @@
+@startuml
+start
+:Check if n <= 1;
+if (n <= 1) then (yes)
+    :Return n;
+else (no)
+    :Initialize fib = 1 and prevFib = 0;
+    while (i <= n)
+        :Compute fib = fib + prevFib;
+        :Update prevFib;
+    endwhile
+    :Return fib;
+endif
+note right
+    Time complexity: O(n)
+    Space complexity: O(1)
+end note
+stop
+@enduml

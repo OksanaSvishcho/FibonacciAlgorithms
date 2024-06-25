@@ -1,0 +1,14 @@
+@startuml
+start
+:Check if n <= 1;
+if (n <= 1) then (yes)
+    :Return n;
+else (no)
+    :Return recursiveFibonacci(n-1) + recursiveFibonacci(n-2);
+endif
+note right
+    Time complexity: O(2^n)
+    Space complexity: O(n) due to the call stack
+end note
+stop
+@enduml
